@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
-public class CollectionMain /*extends Object*/ {
+public class CollectionMain /* extends Object */ {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,6 +14,7 @@ public class CollectionMain /*extends Object*/ {
 		CollectionMain main = new CollectionMain(); // 메모리에 객체 생성.
 		main.checkArray();
 		main.checkSet();
+		main.checkMap();
 	}
 
 	public void checkArray() {
@@ -48,25 +50,25 @@ public class CollectionMain /*extends Object*/ {
 									// 자신이 1번으로 들어간다.
 		// 삭제
 		list.remove(1); // 삭제할 아이템의 index를 지정한다.
-						// 삭제하면  다음 데이터들이 앞으로 한칸씩 이동해서 빈공간을 채운다.
+						// 삭제하면 다음 데이터들이 앞으로 한칸씩 이동해서 빈공간을 채운다.
 
 	}
-	
-	public void checkGeneric(){
-		//제네릭을 사용하는 방법
-		//타입<제네릭타입> 변수이름; // <- 제네릭 타입은 클래스만 가능
+
+	public void checkGeneric() {
+		// 제네릭을 사용하는 방법
+		// 타입<제네릭타입> 변수이름; // <- 제네릭 타입은 클래스만 가능
 		// 타입을 제한할때 유용
-		//동적 배열을 사용할때는 제네릭을 많이 이용
+		// 동적 배열을 사용할때는 제네릭을 많이 이용
 		ArrayList<Item> list = new ArrayList<>();
-//		list.add("Hello");
+		// list.add("Hello");
 		list.add(new Item());
-//		list.add(new Student());
-		
-//		for (int i =0; i<list.size(); i++){
-//			System.out.println(list.get(i));
-//		}
-		
-		for(Item item : list){
+		// list.add(new Student());
+
+		// for (int i =0; i<list.size(); i++){
+		// System.out.println(list.get(i));
+		// }
+
+		for (Item item : list) {
 			item.getMyName();
 		}
 	}
@@ -77,12 +79,16 @@ public class CollectionMain /*extends Object*/ {
 		set.add("hello");
 		set.add("Good to see you");
 		set.add("Hello");
-		
-		//set은 iterator을 달아서 순서대로 처리해 줄 수 있다. 마치 list처럼
+		set.add("jisang");
+
+		set.remove("jisang");
+
+		// set은 iterator을 달아서 순서대로 처리해 줄 수 있다. 마치 list처럼
 		Iterator<String> iterator = set.iterator();
-		
-		while(iterator.hasNext()){
+
+		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
+			// object형으로 리턴이 된다.
 		}
 
 	}
@@ -90,7 +96,21 @@ public class CollectionMain /*extends Object*/ {
 	// Key, Value로 구성된 동적 객체배열
 	public void checkMap() {
 
-		HashMap map = new HashMap();
+		// map또한 interface
+		// 선언
+		HashMap<String, Integer> map = new HashMap<>(); // String을 key로 Integer를 Value로 설정
+		// 입력
+		map.put("key01", 123456);
+		map.put("key02", 1234561234);
+		// map.put("1234, "sdfef"); //<- 이는 에러
+		// 조회
+		System.out.println(map.get("key01"));
+
+		// 맵을 반복문으로 처리하기
+		Set<String> keys = map.keySet();
+		for (String key : keys) {
+			System.out.println(map.get(key));
+		}
 	}
 
 }
