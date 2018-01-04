@@ -130,7 +130,7 @@ public void checkArray() {
 
 - 배열과 컬렉션의 차이? : 배열은 고정크기 이상의 객체를 관리 할 수 없다. 컬렉션은 가변크기로 객체의 개수를 고려하지 않아도 된다.
 
-- ![Collection](http://postfiles16.naver.net/20160122_143/premiummina_1453441737058vb0Av_PNG/%C4%C3%B7%BA%BC%C7%B0%FA_%C0%CE%C5%CD%C6%E4%C0%CC%BD%BA%BF%CD_%C5%AC%B7%A1%BD%BA.png?type=w966)
+![Collection](http://postfiles16.naver.net/20160122_143/premiummina_1453441737058vb0Av_PNG/%C4%C3%B7%BA%BC%C7%B0%FA_%C0%CE%C5%CD%C6%E4%C0%CC%BD%BA%BF%CD_%C5%AC%B7%A1%BD%BA.png?type=w966)
 
 - 컬렉션의 특징 : 제네릭의 기법으로 구현되어 있음, 컬렉션의 요소는 객체들만 가능함.
 
@@ -162,8 +162,22 @@ public void checkArray() {
 		TreeMap == 데이터를 사전식으로 정렬해준다.
 
 
- 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상]
- 출처: http://oingbong.tistory.com/69 [Oing] 
+ + 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상]
+ + 출처: http://oingbong.tistory.com/69 [Oing] 
+
+ ### Generic
+ 
+ - Generic을 사용해야 하는 이유? 1. 컴파일 시 강한 타입 체크를 할 수 있다. 2. 타입 변환을 제거한다. 
+ 
+ - Generic 타입은 타입을 파라미터로 가지는 클래스와 인터페이스를 말함.
+ 
+ - 간단한 예제코드
+ 
+ ```Java
+ public class 클래스명<T>{ ... }
+ public interface 인터페이스명<T>{ ... }
+ ```
+- 멀티 타입 파라미터로도, 메소드에서도 Generic을 통해 타입을 정해 줄 수 있다.
 
 ## TODO
 
@@ -171,15 +185,17 @@ public void checkArray() {
     메모리가 달라도 검색이 가능해야 하는데 이를 위해서 java.lang.Object의 equals( )와 hashCode( )메소드가 사용된다
     equals(): 메모리상의 위치가 다르다고 해도 검색이 가능하도록 설계하려면 override해 준다. hashCode(): 해싱 알고리즘을 사용할 때 객체들을 분류하고 보관할때 기준이 되는 hash value를 만들어 내는 메소드
 
+- 다형성 개념 공부(Collection과 Generic과 연관지어서)
+
+-  Generic에 대한 예제를 만들어 보면서 그 용도를 파악하기 
 
 
 
-출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상])
++ 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상])
 
 ## Retrospect
 
-- 전반적인 문법의 정리하는 시간을 가졌음
-- 개인적으로 의미를 몰랐던 interface에 대해 공부를 하게됨
+- Collection은 굉장히 중요하고 많이 사용이 되는 부분이며 자료구조관점에서도 중요하기에 계속적인 예제코드 만들기 및 알고리즘을 풀면서 다양하게 사용을 해야할 것 같음. 
 
 ## Output
 - 생략
