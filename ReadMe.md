@@ -162,8 +162,8 @@ public void checkArray() {
 		TreeMap == 데이터를 사전식으로 정렬해준다.
 
 
- + 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상]
- + 출처: http://oingbong.tistory.com/69 [Oing] 
+ #### 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상]
+ #### 출처: http://oingbong.tistory.com/69 [Oing] 
 
  ### Generic
  
@@ -191,7 +191,7 @@ public void checkArray() {
 
 
 
-+ 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상])
+#### 출처: http://platonic.tistory.com/entry/Java-Collections-자료구조-List-Set-Map-Tree-Stack-Iterator-Enumeration [Platonic의 조금은 재밌는 일상])
 
 ## Retrospect
 
